@@ -10,6 +10,12 @@
 *.userosscache
 *.sln.docstates
 
+# ignore ALL .log files
+*.log
+
+# ignore ALL files in ANY directory named temp
+temp/
+
 # Ignore vim files:
 *~
 *.swp
@@ -480,3 +486,4 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+*.swp
