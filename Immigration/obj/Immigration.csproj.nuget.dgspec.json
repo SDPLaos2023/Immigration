@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\BadBoy\\source\\repos\\Immigration\\Immigration\\Immigration.csproj": {}
+    "C:\\Project\\Immigration\\Immigration\\Immigration.csproj": {}
   },
   "projects": {
-    "C:\\Users\\BadBoy\\source\\repos\\Immigration\\Immigration\\Immigration.csproj": {
+    "C:\\Project\\Immigration\\Immigration\\Immigration.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\BadBoy\\source\\repos\\Immigration\\Immigration\\Immigration.csproj",
+        "projectUniqueName": "C:\\Project\\Immigration\\Immigration\\Immigration.csproj",
         "projectName": "Immigration",
-        "projectPath": "C:\\Users\\BadBoy\\source\\repos\\Immigration\\Immigration\\Immigration.csproj",
+        "projectPath": "C:\\Project\\Immigration\\Immigration\\Immigration.csproj",
         "packagesPath": "C:\\Users\\BadBoy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\BadBoy\\source\\repos\\Immigration\\Immigration\\obj\\",
+        "outputPath": "C:\\Project\\Immigration\\Immigration\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\BadBoy\\AppData\\Roaming\\NuGet\\NuGet.Config",
