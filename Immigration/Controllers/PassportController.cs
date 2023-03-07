@@ -8,8 +8,7 @@ namespace Immigration.Controllers
     {
         private PassportService oPassportService = new PassportService();
         public PassportController() 
-        { 
-        
+        {
         }
         public IActionResult Index()
         {
@@ -19,7 +18,11 @@ namespace Immigration.Controllers
         [HttpGet]
         public IActionResult PassportRegister(long ID)
         {
-            return View();
+            var _passportRegister = new PassportRegisterModel();
+            //Select Passport Register
+            var _dataTable = oPassportService.PassportRegisterSelect(ID);
+
+            return View(_passportRegister);
         }
 
         [HttpPost]
@@ -36,6 +39,7 @@ namespace Immigration.Controllers
 
             //Insert PassportRegister
             oPassportService.PassportRegisterInsert(_passportRegister);
+
             return View();
         }
     }
