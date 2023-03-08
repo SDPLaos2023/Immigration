@@ -12,6 +12,15 @@ namespace Immigration.Controllers
             return View();
         }
 
+        [HttpGet]
+        public IActionResult BorderPass(long ID)
+        {
+            var _TruckMaster = new TruckMasterModel();
+            //Select Passport Register
+            var _dataTable = oTruckMasterService.TruckMasterSelect(ID);
+
+            return View(_TruckMaster);
+        }
 
         [HttpPost]
         public IActionResult TruckMaster()
@@ -20,10 +29,8 @@ namespace Immigration.Controllers
             _TruckMaster.Truck_No = "พล.80-5512";
             _TruckMaster.Truck_Type = "6 ล้อ";
             _TruckMaster.Truck_Name = "AA";
-
-
-            //Insert PassportRegister
-            oTruckMasterService.TruckMasterInsert(_TruckMaster);
+                       
+            oTruckMasterService.TruckMasterInsert(_TruckMaster,"INSERT");
             return View();
         }
     }
