@@ -41,7 +41,7 @@ namespace Immigration.Controllers
             _BorderPass.Occupation = "Occupation";
 
             //Insert PassportRegister
-            oBorderPassService.BorderPassRegisterInsert(_BorderPass);
+            oBorderPassService.BorderPassRegisterWithMode(_BorderPass, "INSERT");
             return View();
         }
     }

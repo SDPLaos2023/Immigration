@@ -1,3 +1,4 @@
+@model AccountModel;
 <!DOCTYPE html>
 @{
     ViewData["Title"] = "Log in";
@@ -9,32 +10,35 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="~/css/Login.css" asp-append-version="true" />
 </head>
-<body>
-    <section>
-        <div class="loginbox">
-            <form>
-                <h2>ເຂົ້າສູ່ລະບົບ</h2>
-                <div class="inputbox">
-                    <input type="text" required>
-                    <label for="">ຊື່ຜູ້ໃຊ້</label>
-                </div>
 
-                <div class="inputbox">
-                    <input type="password" required>
-                    <label for="">ລະຫັດຜ່ານ</label>
-                </div>
+    <body>
+        <section>
+            <div class="loginbox">
+            <form id="Acccountform" asp-controller="Account" asp-action="Login" onkeydown="return event.key != 'Enter';" method="post" enctype="multipart/form-data">
+                    <h2>ເຂົ້າສູ່ລະບົບ</h2>
+                    <div class="inputbox">
+                        <input type="text" id="txtUserId" asp-for="UserName" required>
+                        <label for="">ຊື່ຜູ້ໃຊ້</label>
+                    </div>
+                    <div class="inputbox">
+                        <input type="password" id="txtPassword" asp-for="Password" required>
+                        <label for="">ລະຫັດຜ່ານ</label>
+                    </div>
 
-                <div class="forget">
-                    <p><a href="#">ລືມລະຫັດຜ່ານ</a></p>
-                </div>
+                    <div class="forget">
+                        <p><a href="#">ລືມລະຫັດຜ່ານ</a></p>
+                    </div>
 
-                 <center>
-                    <button>ເຂົ້າສູ່ລະບົບ</button>
-                 </center>
+                    <center>
+                        <button type="submit" id="buttonLogin">ເຂົ້າສູ່ລະບົບ</button>
+                    </center>
 
-            </form>
-        </div>
-    </section>
-    
-</body>
+                </form>
+            </div>
+            
+        </section>
+
+    </body>
+
+
 </html>

@@ -9,7 +9,7 @@ namespace Immigration.Services
     public class TemporaryService
     {
         private SDP_Immigration_DBContext _context = new SDP_Immigration_DBContext();
-        public string TemporaryBorderPassInsert(TemporaryBorderModel _temporaryBorder)
+        public string TemporaryBorderPassWithMode(TemporaryBorderModel _temporaryBorder, string Mode)
         {
             try
             {
@@ -22,6 +22,7 @@ namespace Immigration.Services
                 command.Parameters.Add(new SqlParameter("@Country", _temporaryBorder.Country));
                 command.Parameters.Add(new SqlParameter("@Birth_Country", _temporaryBorder.BirthCountry));
                 command.Parameters.Add(new SqlParameter("@Document_No", _temporaryBorder.DocumentNo));
+                command.Parameters.Add(new SqlParameter("@Mode", Mode));
                 command.CommandType = CommandType.StoredProcedure;
                 _context.Database.OpenConnection();
                 var result = command.ExecuteScalar();

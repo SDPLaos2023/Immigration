@@ -35,7 +35,7 @@ namespace Immigration.Controllers
             _temporaryBorderPass.DocumentNo = 1;
 
             //Insert PassportRegister
-            oTemporaryService.TemporaryBorderPassInsert(_temporaryBorderPass);
+            oTemporaryService.TemporaryBorderPassWithMode(_temporaryBorderPass, "INSERT");
 
             return View();
         }

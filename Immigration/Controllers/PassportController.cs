@@ -38,7 +38,7 @@ namespace Immigration.Controllers
             _passportRegister.DocumentNo = 1;
 
             //Insert PassportRegister
-            oPassportService.PassportRegisterInsert(_passportRegister);
+            oPassportService.PassportRegisterWithMode(_passportRegister, "INSERT");
 
             return View();
         }

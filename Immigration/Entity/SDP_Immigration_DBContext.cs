@@ -19,6 +19,7 @@ namespace Immigration.Entity
         public virtual DbSet<BlackListRegister> BlackListRegister { get; set; } = null!;
         public virtual DbSet<BorderPassRegister> BorderPassRegister { get; set; } = null!;
         public virtual DbSet<PassportRegister> PassportRegister { get; set; } = null!;
+        public virtual DbSet<SystemUser> SystemUser { get; set; } = null!;
         public virtual DbSet<TemporaryBorderPassRegister> TemporaryBorderPassRegister { get; set; } = null!;
         public virtual DbSet<TruckMasterData> TruckMasterData { get; set; } = null!;
 
@@ -26,18 +27,9 @@ namespace Immigration.Entity
         {
             if (!optionsBuilder.IsConfigured)
             {
-                //optionsBuilder.UseSqlServer("Server=MSI\\SQLEXPRESS;Database=SDP_Immigration_DB;user id=sa;pwd=sugarps2;Trusted_Connection=False;");
-                string Connection = GetConfiguration();
-                optionsBuilder.UseSqlServer(Connection);
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+                optionsBuilder.UseSqlServer("Server=MSI\\SQLEXPRESS;Database=SDP_Immigration_DB;user id=sa;pwd=sugarps2;Trusted_Connection=True;");
             }
-        }
-
-        public string GetConfiguration()
-        {
-            var builder = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
-            var configuration = builder.Build();
-            var Connect = configuration.GetSection("ConnectionStrings").GetSection("DBContext").Value;
-            return Connect;
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -139,6 +131,27 @@ namespace Immigration.Entity
                 entity.Property(e => e.Sex).HasMaxLength(8);
 
                 entity.Property(e => e.Surname).HasMaxLength(1000);
+            });
+
+            modelBuilder.Entity<SystemUser>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToTable("SYSTEM_USER");
+
+                entity.Property(e => e.Id).HasColumnName("ID");
+
+                entity.Property(e => e.Password)
+                    .HasMaxLength(1000)
+                    .HasColumnName("PASSWORD");
+
+                entity.Property(e => e.UserId)
+                    .HasMaxLength(8)
+                    .HasColumnName("USER_ID");
+
+                entity.Property(e => e.UserName)
+                    .HasMaxLength(1000)
+                    .HasColumnName("USER_NAME");
             });
 
             modelBuilder.Entity<TemporaryBorderPassRegister>(entity =>

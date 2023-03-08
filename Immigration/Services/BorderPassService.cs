@@ -9,7 +9,7 @@ namespace Immigration.Services
     public class BorderPassService
     {
         private SDP_Immigration_DBContext _context = new SDP_Immigration_DBContext();
-        public string BorderPassRegisterInsert(BorderPassModel _borderPassModel)
+        public string BorderPassRegisterWithMode(BorderPassModel _borderPassModel, string Mode)
         {
             try
             {
@@ -25,6 +25,7 @@ namespace Immigration.Services
                 command.Parameters.Add(new SqlParameter("@Province", _borderPassModel.Province));
                 command.Parameters.Add(new SqlParameter("@Document_No", _borderPassModel.DocumentNo));
                 command.Parameters.Add(new SqlParameter("@Occupation", _borderPassModel.Occupation));
+                command.Parameters.Add(new SqlParameter("@Mode", Mode));
                 command.CommandType = CommandType.StoredProcedure;
                 _context.Database.OpenConnection();
                 var result = command.ExecuteScalar();
