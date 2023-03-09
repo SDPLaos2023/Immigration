@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+@{
+    ViewData["Title"] = "Black List";
+}
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="~/css/Register.css" asp-append-version="true" />
+</head>
+<body>
+    <section>
+        <h2 class="title">Black List Register</h2>
+        <div class="row regisbox">
+            <div class="col-md-6 leftbox">
+               <center>
+                    <img class="userimg" width="200" height="200" src="https://sv1.picz.in.th/images/2023/02/01/LtnUu2.png" alt="LtnUu2.png" border="0" /> <br>
+                    <div class="input-group mb-3">
+                        <input type="file" class="form-control" id="inputGroupFile01">
+                    </div>
+                </center>
+            </div>
+            <div class="col-md-6 rightbox">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="">
+                </div>
+                <div class="mb-3">
+                    <label for="surename" class="form-label">Surname</label>
+                    <input type="text" class="form-control" id="surename" placeholder="">
+                </div>
+                <div class="mb-3">
+                    <label for="birtofdate" class="form-label">Birt Of Date</label>
+                    <input type="date" class="form-control" id="surename" placeholder="">
+                </div>
+                <div class="mb-3">
+                    <label for="sex" class="form-label">Sex</label>
+                    <select class="form-select" aria-label="Default select example" id="SEX">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="country" class="form-label">Country</label>
+                    <select class="form-select" aria-label="Default select example" id="country">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="birthcountry" class="form-label">Birth Country</label>
+                    <select class="form-select" aria-label="Default select example" id="birthcountry">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="docno" class="form-label">Document No</label>
+                    <input type="text" class="form-control" id="docno" placeholder="">
+                </div>
+                <center>
+                    <button>Save</button>
+                    <button>Clear</button>
+                </center>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>

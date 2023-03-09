@@ -26,6 +26,16 @@ namespace Immigration.Controllers
             return View();
         }
 
+        public IActionResult Truck()
+        {
+            return View();
+        }
+
+        public IActionResult Blacklist()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
