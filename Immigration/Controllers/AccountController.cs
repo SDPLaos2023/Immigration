@@ -25,7 +25,7 @@ namespace Immigration.Controllers
         {
             var UserId = "";
             var User = oAccountService.SystemUserSelect(accountModel);
-            if(User.Rows.Count> 0)
+            if (User.Rows.Count > 0)
                 foreach (DataRow item in User.Rows)
                     UserId = item["USER_ID"].ToString();
 

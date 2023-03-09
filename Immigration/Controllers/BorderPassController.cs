@@ -21,28 +21,15 @@ namespace Immigration.Controllers
             var _BorderPass = new BorderPassModel();
             //Select Passport Register
             var _dataTable = oBorderPassService.BorderPassSelect(ID);
-
             return View(_BorderPass);
         }
 
         [HttpPost]
-        public IActionResult BorderPass()
+        public IActionResult BorderPass(BorderPassModel _BorderPass)
         {
-            var _BorderPass = new BorderPassModel();
-            _BorderPass.Surname = "Ratchanon Thuknuek";
-            _BorderPass.GivenName = "Ratchanon Thuknuek";
-            _BorderPass.BirthOfDate = DateTime.Now.ToString("dd/MM/yyyy");
-            _BorderPass.Sex = "M";
-            _BorderPass.Country = "Thailand";
-            _BorderPass.Village = "Village";
-            _BorderPass.District = "District";
-            _BorderPass.Province = "Province";
-            _BorderPass.DocumentNo = 1;
-            _BorderPass.Occupation = "Occupation";
-
             //Insert PassportRegister
             oBorderPassService.BorderPassRegisterWithMode(_BorderPass, "INSERT");
-            return View();
+            return View("Index");
         }
     }
 }

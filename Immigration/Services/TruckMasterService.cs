@@ -9,7 +9,7 @@ namespace Immigration.Services
     public class TruckMasterService
     {
         private SDP_Immigration_DBContext _context = new SDP_Immigration_DBContext();
-        public string TruckMasterInsert(TruckMasterModel _TruckMaster,string Mode)
+        public string TruckMasterInsert(TruckMasterModel _TruckMaster, string Mode)
         {
             try
             {
@@ -29,7 +29,7 @@ namespace Immigration.Services
                 return "Fail";
             }
         }
-        
+
         public DataTable TruckMasterSelect(long ID)
         {
             try
@@ -52,6 +52,4 @@ namespace Immigration.Services
         }
 
     }
-
-
 }

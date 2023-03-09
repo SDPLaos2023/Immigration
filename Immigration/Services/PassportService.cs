@@ -6,24 +6,25 @@ using System.Data;
 
 namespace Immigration.Services
 {
-    public class TemporaryService
+    public class PassportService
     {
         private SDP_Immigration_DBContext _context = new SDP_Immigration_DBContext();
-        public string TemporaryBorderPassWithMode(TemporaryBorderModel _temporaryBorder, string Mode)
+        public string PassportRegisterWithMode(PassportRegisterModel _passportRegister, string Mode)
         {
             try
             {
                 var command = _context.Database.GetDbConnection().CreateCommand();
-                command.CommandText = "SP_TEMPORARY_BORDER_PASS_INSERT";
+                command.CommandText = "SP_PASSPORT_REGISTER_INSERT";
                 command.Parameters.Add(new SqlParameter("@ID", Convert.ToInt64("0")));
-                command.Parameters.Add(new SqlParameter("@Name", _temporaryBorder.Name));
-                command.Parameters.Add(new SqlParameter("@Surname", _temporaryBorder.Surname));
-                command.Parameters.Add(new SqlParameter("@Birth_of_date", Convert.ToDateTime(_temporaryBorder.BirthOfDate)));
-                command.Parameters.Add(new SqlParameter("@Sex", _temporaryBorder.Sex));
-                command.Parameters.Add(new SqlParameter("@Country", _temporaryBorder.Country));
-                command.Parameters.Add(new SqlParameter("@Birth_Country", _temporaryBorder.BirthCountry));
-                command.Parameters.Add(new SqlParameter("@Document_No", _temporaryBorder.DocumentNo));
+                command.Parameters.Add(new SqlParameter("@Name", _passportRegister.Name));
+                command.Parameters.Add(new SqlParameter("@Surname", _passportRegister.Surname));
+                command.Parameters.Add(new SqlParameter("@Birth_of_date", Convert.ToDateTime(_passportRegister.BirthOfDate)));
+                command.Parameters.Add(new SqlParameter("@Sex", _passportRegister.Sex));
+                command.Parameters.Add(new SqlParameter("@Country", _passportRegister.Country));
+                command.Parameters.Add(new SqlParameter("@Birth_Country", _passportRegister.BirthCountry));
+                command.Parameters.Add(new SqlParameter("@Document_No", _passportRegister.DocumentNo));
                 command.Parameters.Add(new SqlParameter("@Mode", Mode));
+                //command.Parameters.Add(new SqlParameter("@ImagePath", _passportRegister.ImagePath));
                 command.CommandType = CommandType.StoredProcedure;
                 _context.Database.OpenConnection();
                 var result = command.ExecuteScalar();
@@ -35,12 +36,12 @@ namespace Immigration.Services
             }
         }
 
-        public DataTable TemporaryBorderPassSelect(long ID)
+        public DataTable PassportRegisterSelect(long ID)
         {
             try
             {
                 var command = _context.Database.GetDbConnection().CreateCommand();
-                command.CommandText = "SP_TEMPORARY_BORDER_PASS_SELECT_BY_ID";
+                command.CommandText = "SP_PASSPORT_REGISTER_SELECT_BY_ID";
                 command.Parameters.Add(new SqlParameter("@ID", ID));
                 command.CommandType = CommandType.StoredProcedure;
                 _context.Database.OpenConnection();

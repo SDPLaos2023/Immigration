@@ -23,21 +23,11 @@ namespace Immigration.Controllers
         }
 
         [HttpPost]
-        public IActionResult TemporaryBorderPass()
+        public IActionResult TemporaryBorderPass(TemporaryBorderModel _temporaryBorderPass)
         {
-            var _temporaryBorderPass = new TemporaryBorderModel();
-            _temporaryBorderPass.Surname = "Ratchanon Thuknuek";
-            _temporaryBorderPass.GivenName = "Ratchanon Thuknuek";
-            _temporaryBorderPass.BirthOfDate = DateTime.Now.ToString("dd/MM/yyyy");
-            _temporaryBorderPass.Sex = "M";
-            _temporaryBorderPass.Country = "Thailand";
-            _temporaryBorderPass.BirthCountry = "Thailand";
-            _temporaryBorderPass.DocumentNo = 1;
-
             //Insert PassportRegister
             oTemporaryService.TemporaryBorderPassWithMode(_temporaryBorderPass, "INSERT");
-
-            return View();
+            return View("Index");
         }
     }
 }

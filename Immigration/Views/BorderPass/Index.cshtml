@@ -1,5 +1,100 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model BorderPassModel;
+<!DOCTYPE html>
 @{
+    ViewData["Title"] = "Border Pass";
 }
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="~/css/Register.css" asp-append-version="true" />
+</head>
+<body>
+    <section>
+        <h2 class="title">Border Pass Register</h2>
+        <form id="BorderPassportform" asp-controller="BorderPass" asp-action="BorderPass" onkeydown="return event.key != 'Enter';" method="post" enctype="multipart/form-data">
+        <div class="row regisbox">
+            <div class="col-md-6 leftbox">
+               <center>
+                    <img class="userimg" width="200" height="200" src="https://sv1.picz.in.th/images/2023/02/01/LtnUu2.png" alt="LtnUu2.png" border="0" /> <br>
+                    <div class="input-group mb-3">
+                        <input type="file" class="form-control" id="inputGroupFile01">
+                    </div>
+                </center>
+            </div>
+            <div class="col-md-6 rightbox">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="" asp-for="Name">
+                </div>
+                <div class="mb-3">
+                    <label for="surname" class="form-label">Surname</label>
+                    <input type="text" class="form-control" id="surname" placeholder="" asp-for="Surname">
+                </div>
+                <div class="mb-3">
+                    <label for="birtofdate" class="form-label">Birt Of Date</label>
+                    <input type="date" class="form-control" id="birtofdate" placeholder="" asp-for="BirthOfDate">
+                </div>
+                <div class="mb-3">
+                    <label for="sex" class="form-label">Sex</label>
+                    <select class="form-select" aria-label="Default select example" id="SEX" asp-for="Sex">
+                        <option selected>Open this select menu</option>
+                        <option value="M">ชาย</option>
+                        <option value="W">หญิง</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="country" class="form-label">Country</label>
+                    <select class="form-select" aria-label="Default select example" id="country" asp-for="Country">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="village" class="form-label">Village</label>
+                    <select class="form-select" aria-label="Default select example" id="village" asp-for="Village">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="district" class="form-label">District</label>
+                    <select class="form-select" aria-label="Default select example" id="district" asp-for="District">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="province" class="form-label">Province</label>
+                    <select class="form-select" aria-label="Default select example" id="province" asp-for="Province">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="docno" class="form-label">Document No</label>
+                    <input type="text" class="form-control" id="docno" placeholder="" asp-for="DocumentNo">
+                </div>
+                <div class="mb-3">
+                    <label for="occupation" class="form-label">Occupation</label>
+                    <input type="text" class="form-control" id="occupation" placeholder="" asp-for="Occupation">
+                </div>
+                <center>
+                    <button type="submit">Save</button>
+                    <button type="button">Clear</button>
+                </center>
+            </div>
+        </div>
+        </form>
+    </section>
+
+</body>
+</html>
