@@ -1,0 +1,52 @@
+﻿body {
+ 
+}
+
+section {
+    font-family: 'Noto Sans Lao';
+}
+
+:root {
+    --color-primary: #0073ff;
+    --color-white: #e9e9e9;
+    --color-black: #141d28;
+}
+
+.title{
+    padding: 10px 0px;
+    margin: 10px 0px;
+    font-weight: bold;
+    width: 100%;
+    text-align:center;
+}
+.regisbox {
+    padding: 10px 0px;
+}
+
+.leftbox {
+    padding: 0 50px;
+}
+
+.rightbox {
+    padding: 0 50px;
+} 
+
+button {
+    height: 40px;
+    padding:0px 20px;
+    border-radius: 10px;
+    background: #bdc3c7;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    color: #fff;
+}
+
+.userimg {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: var(--color-white);
+    border: solid 5px var(--color-black);
+}
