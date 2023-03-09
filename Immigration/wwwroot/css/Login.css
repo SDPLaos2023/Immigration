@@ -1,5 +1,5 @@
 ﻿body {
- font-family: 'Noto Sans Lao';  
+ 
 }
 
 section {
@@ -8,6 +8,7 @@ section {
     align-items: center;
     width: 100%;
     height: 100vh;
+    font-family: 'Noto Sans Lao';
 }
 
 .loginbox {
