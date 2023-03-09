@@ -9,5 +9,6 @@ namespace Immigration.Entity
         public string? TruckLicencePlateNo { get; set; }
         public string? TruckType { get; set; }
         public string? CompanyName { get; set; }
+        public string? Mode { get; set; }
     }
 }

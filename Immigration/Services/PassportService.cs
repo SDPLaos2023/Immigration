@@ -9,7 +9,7 @@ namespace Immigration.Services
     public class PassportService
     {
         private SDP_Immigration_DBContext _context = new SDP_Immigration_DBContext();
-        public string PassportRegisterInsert(PassportRegisterModel _passportRegister)
+        public string PassportRegisterWithMode(PassportRegisterModel _passportRegister, string Mode)
         {
             try
             {
@@ -22,6 +22,7 @@ namespace Immigration.Services
                 command.Parameters.Add(new SqlParameter("@Country", _passportRegister.Country));
                 command.Parameters.Add(new SqlParameter("@Birth_Country", _passportRegister.BirthCountry));
                 command.Parameters.Add(new SqlParameter("@Document_No", _passportRegister.DocumentNo));
+                command.Parameters.Add(new SqlParameter("@Mode", Mode));
                 command.CommandType = CommandType.StoredProcedure;
                 _context.Database.OpenConnection();
                 var result = command.ExecuteScalar();

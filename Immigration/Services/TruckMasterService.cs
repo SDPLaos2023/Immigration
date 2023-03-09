@@ -6,22 +6,18 @@ using System.Data;
 
 namespace Immigration.Services
 {
-    public class TemporaryService
+    public class TruckMasterService
     {
         private SDP_Immigration_DBContext _context = new SDP_Immigration_DBContext();
-        public string TemporaryBorderPassWithMode(TemporaryBorderModel _temporaryBorder, string Mode)
+        public string TruckMasterInsert(TruckMasterModel _TruckMaster,string Mode)
         {
             try
             {
                 var command = _context.Database.GetDbConnection().CreateCommand();
-                command.CommandText = "SP_TEMPORARY_BORDER_PASS_INSERT";
-                command.Parameters.Add(new SqlParameter("@Surname", _temporaryBorder.Surname));
-                command.Parameters.Add(new SqlParameter("@Given_name", _temporaryBorder.GivenName));
-                command.Parameters.Add(new SqlParameter("@Birth_of_date", Convert.ToDateTime(_temporaryBorder.BirthOfDate)));
-                command.Parameters.Add(new SqlParameter("@Sex", _temporaryBorder.Sex));
-                command.Parameters.Add(new SqlParameter("@Country", _temporaryBorder.Country));
-                command.Parameters.Add(new SqlParameter("@Birth_Country", _temporaryBorder.BirthCountry));
-                command.Parameters.Add(new SqlParameter("@Document_No", _temporaryBorder.DocumentNo));
+                command.CommandText = "SP_TRUCK_MASTER_DATA_INSERT_UPDATE_DELETE";
+                command.Parameters.Add(new SqlParameter("@TRUCK_LICENCE_PLATE_NO", _TruckMaster.Truck_No));
+                command.Parameters.Add(new SqlParameter("@TRUCK_TYPE", _TruckMaster.Truck_Type));
+                command.Parameters.Add(new SqlParameter("@COMPANY_NAME", _TruckMaster.Truck_Name));
                 command.Parameters.Add(new SqlParameter("@Mode", Mode));
                 command.CommandType = CommandType.StoredProcedure;
                 _context.Database.OpenConnection();
@@ -33,13 +29,13 @@ namespace Immigration.Services
                 return "Fail";
             }
         }
-
-        public DataTable TemporaryBorderPassSelect(long ID)
+        
+        public DataTable TruckMasterSelect(long ID)
         {
             try
             {
                 var command = _context.Database.GetDbConnection().CreateCommand();
-                command.CommandText = "SP_TEMPORARY_BORDER_PASS_SELECT_BY_ID";
+                command.CommandText = "SP_TRUCK_MASTER_DATA_SELECT_BY_ID";
                 command.Parameters.Add(new SqlParameter("@ID", ID));
                 command.CommandType = CommandType.StoredProcedure;
                 _context.Database.OpenConnection();
@@ -54,5 +50,8 @@ namespace Immigration.Services
                 return dt;
             }
         }
+
     }
+
+
 }
