@@ -1,52 +1,158 @@
 ﻿<!DOCTYPE html>
 @{
-    ViewData["Title"] = "Master Data";
+    ViewData["Title"] = "Checking Infomation";
 }
 
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="~/css/Data.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Checking.css" asp-append-version="true" />
 </head>
 <body>
     <section>
-        <h2 class="title">Master Data</h2>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Document No</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Surname</th>
-                    <th scope="col">Birth Of Date</th>
-                    <th scope="col">Sex</th>
-                    <th scope="col">Country</th>
-                    <th scope="col">Birth Country</th>
-                    <th scope="col">Oppupation</th>
-                    <th scope="col">Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td >1</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>mdo</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>mdo</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>
-                        <div class="actionbox">
-                            <a class="btnedit"><i class="fas fa-pen-to-square"></i></a>
-                            <a class="btndelete"><i class="fas fa-trash"></i></a>
+        <h2 class="title">Home</h2>
+        <div class="headerbox">
+            <div class="headerbox-left">
+                <div class="mb-3">
+                    <label for="docnosearch" class="form-label">Search for Passport / Border Pass / Temporary Border Pass / QR Code</label>
+                    <input type="text" class="form-control form-control-sm" id="docnosearch" placeholder="">
+                </div>
+            </div>
+            <div class="headerbox-right">
+                <div class="mb-3">
+                    <label for="docnohead" class="form-label">Document No</label>
+                    <input type="text" class="form-control form-control-sm" id="docnohead" placeholder="000001" readonly>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row perinfobox">
+                    <center>
+                        <label class="title">Personal Imfomation</label>
+                    </center>
+                    <div class="col-md-6 perinfobox-left">
+                        <div class="mb-3">
+                            <label for="docno" class="form-label">Document No</label>
+                            <input type="text" class="form-control form-control-sm" id="docno" placeholder="" readonly>
                         </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control form-control-sm" id="name" placeholder="" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="surename" class="form-label">Surname</label>
+                            <input type="text" class="form-control form-control-sm" id="surename" placeholder="" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="birtofdate" class="form-label">Birt Of Date</label>
+                            <input type="text" class="form-control form-control-sm" id="surename" placeholder="" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="sex" class="form-label">Sex</label>
+                            <input type="text" class="form-control form-control-sm" id="sex" placeholder="" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="country" class="form-label">Country</label>
+                            <input type="text" class="form-control form-control-sm" id="country" placeholder="" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="village" class="form-label">Village</label>
+                            <input type="text" class="form-control form-control-sm" id="village" placeholder="" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="district" class="form-label">District</label>
+                            <input type="text" class="form-control form-control-sm" id="district" placeholder="" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="province" class="form-label">Province</label>
+                            <input type="text" class="form-control form-control-sm" id="province" placeholder="" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="occupation" class="form-label">Occupation</label>
+                            <input type="text" class="form-control form-control-sm" id="occupation" placeholder="" readonly>
+                        </div>
+                    </div>
+                    <div class="col-md-6 perinfobox-right">
+                        <center>
+                            <img class="userimg" src="https://sv1.picz.in.th/images/2023/02/01/LtnUu2.png" alt="LtnUu2.png" border="0" /> <br>
+                            <div class="statusbox">
+                                Status: <span>PASS</span>
+                            </div>
+                        </center>
+                        <div class="form-floating">
+                            <textarea class="form-control" placeholder="Leave a comment here" id="remark" style="height: 120px" readonly></textarea>
+                            <label for="remark">Remark</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <div class="col-md-3 cambox">
+                <center>
+                    <label class="title">Camera Cam</label>
+                    <img class="userimg" src="https://sv1.picz.in.th/images/2023/02/01/LtnUu2.png" alt="LtnUu2.png" border="0" /> <br>
+                    <button class="btnTP">Take Picture</button>
+                    <button class="btnCP">Clear Picture</button>
+                </center>
+                <br />
+                <div>
+                    <center>
+                        <button class="btnacc"><i class="fas fa-check"></i><span>Accept</span></button>
+                        <button class="btnrej"><i class="fas fa-ban"></i><span>Reject</span></button>
+                        <button class="btncleardoc"><i class="fas fa-broom"></i><span>Clear Doc</span></button>
+                        <button class="btndeletedoc"><i class="fas fa-trash"></i><span>Delete Doc</span></button>
+                    </center>
+                </div>
+            </div>
+
+            <div class="col-md-3 follbox">
+                <label class="title">Follwers</label>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control form-control-sm" id="name" placeholder="">
+                </div>
+                <div class="mb-3">
+                    <label for="surename" class="form-label">Surname</label>
+                    <input type="text" class="form-control form-control-sm" id="surename" placeholder="">
+                </div>
+                <div class="mb-3">
+                    <label for="birtofdate" class="form-label">Birt Of Date</label>
+                    <input type="text" class="form-control form-control-sm" id="surename" placeholder="">
+                </div>
+                <div class="mb-3">
+                    <label for="comname" class="form-label">Company Name</label>
+                    <input type="text" class="form-control form-control-sm" id="comname" placeholder="">
+                </div>
+                <center>
+                    <button class="btnadd">Add</button>
+                </center>
+                <br />
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Birth Date</th>
+                            <th scope="col">Company</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>mdo</td>
+                            <td>
+                                <div class="actionbox">
+                                    <a class="btnedit"><i class="fas fa-pen-to-square"></i></a>
+                                    <a class="btndelete"><i class="fas fa-trash"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
 </body>
 </html>

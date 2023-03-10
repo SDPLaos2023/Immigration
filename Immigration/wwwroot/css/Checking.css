@@ -1,0 +1,190 @@
+﻿body {
+ 
+}
+
+section {
+    margin: 0px 20px;
+    font-family: 'Noto Sans Lao';
+}
+
+:root {
+    --color-primary: #0073ff;
+    --color-white: #e9e9e9;
+    --color-black: #141d28;
+}
+
+.title {
+    padding: 5px 0px;
+    margin: 10px 0px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+}
+
+.headerbox{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.perinfobox {
+    border-radius: 10px 0px 0px 10px;
+    padding: 5px;
+    background-color: rgba(0,0,0,0.05);
+}
+
+.perinfobox-left{
+    /*background-color:red;*/
+}
+
+.statusbox {
+    padding: 5px 0px;
+    margin: 10px 0px;
+    border-radius: 5px;
+    border: solid 2px green;
+    color: black;
+}
+
+.statusbox span{
+    color: green;
+    font-weight: bold;
+}
+
+.perinfobox-right {
+    /*background-color: green;*/
+}
+.cambox {
+    padding: 10px;
+    background-color: rgba(0,0,0,0.1);
+}
+
+.btnTP {
+    padding: 5px 10px;
+    height: 40px;
+    border-radius: 10px;
+    background: #bdc3c7;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    color: #fff;
+}
+
+.btnCP {
+    padding: 5px 10px;
+    height: 40px;
+    border-radius: 10px;
+    background: #bdc3c7;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    color: #fff;
+}
+
+.userimg {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: var(--color-white);
+    border: solid 5px var(--color-black);
+    width: 90%;
+    height: auto;
+}
+
+.follbox {
+    padding: 10px;
+    border-radius: 0px 10px 10px 0px;
+    background-color: rgba(0,0,0,0.05);
+}
+
+.btnadd {
+    width: 50%;
+    padding: 5px 10px;
+    height: 40px;
+    border-radius: 10px;
+    background: #bdc3c7;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    color: #fff;
+}
+
+.actionbox {
+    display: flex;
+    align-items: center;
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.btnedit {
+    margin: 0px 5px;
+    padding: 0px;
+}
+
+.btndelete {
+    margin: 0px 5px;
+    padding: 0px;
+}
+
+.btnacc {
+    width: 50%;
+    margin: 10px;
+    padding: 5px 10px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: green;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    color: #fff;
+}
+.btnrej {
+    width: 50%;
+    margin: 10px;
+    padding: 5px 10px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: red;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    color: #fff;
+}
+.btncleardoc {
+    width: 50%;
+    margin: 10px;
+    padding: 5px 10px;
+    height: 40px;
+    border-radius: 10px;
+    background: #bdc3c7;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    color: #fff;
+}
+.btndeletedoc {
+    width: 50%;
+    margin: 10px;
+    padding: 5px 10px;
+    height: 40px;
+    border-radius: 10px;
+    background: #bdc3c7;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    color: #fff;
+}

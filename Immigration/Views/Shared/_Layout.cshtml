@@ -39,6 +39,7 @@
                         <a href="#">Report <i class="fas fa-caret-down"></i></a>
                         <div class="dropdown-menu">
                             <ul>
+                                <li><a asp-area="" asp-controller="Report" asp-action="Mdata">Master Data</a></li>
                                 <li><a href="#">STATISTIC IN-OUT BY PASSPORT</a></li>
                                 <li><a href="#">STATISTIC IN-OUT BY BORDER PASS BOOK</a></li>
                                 <li><a href="#">STATISTIC IN-OUT BY TEMPORARY BORDER PASS</a></li>
@@ -95,7 +96,7 @@
         -->
     </header>
 
-    <div class="container">
+    <div class="row m-auto">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
