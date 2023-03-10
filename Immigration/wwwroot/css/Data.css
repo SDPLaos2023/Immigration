@@ -1,0 +1,35 @@
+﻿body {
+ 
+}
+
+section {
+    font-family: 'Noto Sans Lao';
+}
+
+.title {
+    padding: 10px 0px;
+    margin: 10px 0px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+}
+
+
+.actionbox {
+    display: flex;
+    align-items: center;
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.btnedit {
+    margin: 0px 10px;
+    padding: 0px;
+}
+
+.btndelete {
+    margin: 0px 10px;
+    padding: 0px;
+}
