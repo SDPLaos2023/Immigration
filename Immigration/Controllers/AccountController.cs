@@ -17,6 +17,7 @@ namespace Immigration.Controllers
         [HttpGet]
         public IActionResult Login()
         {
+            string aa = "";
             return View();
         }
 
