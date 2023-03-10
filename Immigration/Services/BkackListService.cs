@@ -59,7 +59,7 @@ namespace Immigration.Services
                 return "Fail";
             }
         }
-  
+
         public DataTable BkackListSelect(long _ID)
         {
             try

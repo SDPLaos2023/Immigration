@@ -15,8 +15,9 @@ namespace Immigration.Services
             {
                 var command = _context.Database.GetDbConnection().CreateCommand();
                 command.CommandText = "SP_BORDER_PASS_REGISTER_INSERT";
+                command.Parameters.Add(new SqlParameter("@ID", Convert.ToInt64("0")));
+                command.Parameters.Add(new SqlParameter("@Name", _borderPassModel.Name));
                 command.Parameters.Add(new SqlParameter("@Surname", _borderPassModel.Surname));
-                command.Parameters.Add(new SqlParameter("@Given_name", _borderPassModel.GivenName));
                 command.Parameters.Add(new SqlParameter("@Birth_of_date", Convert.ToDateTime(_borderPassModel.BirthOfDate)));
                 command.Parameters.Add(new SqlParameter("@Sex", _borderPassModel.Sex));
                 command.Parameters.Add(new SqlParameter("@Country", _borderPassModel.Country));
