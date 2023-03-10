@@ -17,6 +17,10 @@ namespace Immigration.Controllers
             return View();
         }
         
+        public IActionResult Personinout()
+        {
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
