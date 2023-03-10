@@ -50,3 +50,27 @@ button {
     background-color: var(--color-white);
     border: solid 5px var(--color-black);
 }
+
+.fas {
+    margin: 0px;
+    padding: 0px;
+}
+
+.actionbox {
+    display: flex;
+    align-items: center;
+    height: 25px;
+    display: flex;
+    flex-direction:row;
+    align-items:center;
+}
+
+.btnedit {
+    margin: 0px 10px;
+    padding: 0px;
+}
+
+.btndelete {
+    margin: 0px 10px;
+    padding: 0px;
+}
