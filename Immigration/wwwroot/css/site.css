@@ -1,6 +1,3 @@
-html {
-}
-
 @media (min-width: 768px) {
   html {
     font-size: 16px;
@@ -8,11 +5,11 @@ html {
 }
 
 html {
-  min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    font-family: 'Noto Sans Lao' !important;
 }
 
 
@@ -100,7 +97,7 @@ body {
     }
 
         .barcenter ul li:hover .dropdown-menu ul li {
-            width: 250px;
+            width: 350px;
             padding: 10px;
         }
 
