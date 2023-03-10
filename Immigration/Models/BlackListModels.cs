@@ -1,6 +1,6 @@
 ﻿namespace Immigration.Models
 {
-    public class BkackListModels
+    public class BlackListModels
     {
         public long Id { get; set; }
         public string? Surname { get; set; }

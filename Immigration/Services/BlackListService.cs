@@ -6,23 +6,24 @@ using System.Data;
 
 namespace Immigration.Services
 {
-    public class BkackListService
+    public class BlackListService
     {
         private SDP_Immigration_DBContext _context = new SDP_Immigration_DBContext();
-        public string BkackListInsert(BkackListModels _BkackList, string Mode)
+        public string BlackListInsert(BlackListModels _BlackList, string Mode)
         {
             try
             {
                 var command = _context.Database.GetDbConnection().CreateCommand();
                 command.CommandText = "SP_BLACK_LIST_REGISTER_INSERT_EDIT_DELETE";
-                command.Parameters.Add(new SqlParameter("@Surname", _BkackList.Surname));
-                command.Parameters.Add(new SqlParameter("@Given_name", _BkackList.Given_name));
-                command.Parameters.Add(new SqlParameter("@Birth_of_dat", _BkackList.Birth_of_date));
-                command.Parameters.Add(new SqlParameter("@Sex", _BkackList.Sex));
-                command.Parameters.Add(new SqlParameter("@Country", _BkackList.Country));
-                command.Parameters.Add(new SqlParameter("@Birth_Countryt", _BkackList.Birth_Country));
-                command.Parameters.Add(new SqlParameter("@Document_No", _BkackList.Document_No));
-                command.Parameters.Add(new SqlParameter("@Remarks", _BkackList.Remarks));
+                command.Parameters.Add(new SqlParameter("@ID", Convert.ToInt64("0")));
+                command.Parameters.Add(new SqlParameter("@Surname", _BlackList.Surname));
+                command.Parameters.Add(new SqlParameter("@Given_name", _BlackList.Given_name));
+                command.Parameters.Add(new SqlParameter("@Birth_of_date",Convert.ToDateTime( _BlackList.Birth_of_date)));
+                command.Parameters.Add(new SqlParameter("@Sex", _BlackList.Sex));
+                command.Parameters.Add(new SqlParameter("@Country", _BlackList.Country));
+                command.Parameters.Add(new SqlParameter("@Birth_Countryt", _BlackList.Birth_Country));
+                command.Parameters.Add(new SqlParameter("@Document_No", _BlackList.Document_No));
+                command.Parameters.Add(new SqlParameter("@Remarks", _BlackList.Remarks));
                 command.Parameters.Add(new SqlParameter("@Mode", Mode));
                 command.CommandType = CommandType.StoredProcedure;
                 _context.Database.OpenConnection();
@@ -34,21 +35,21 @@ namespace Immigration.Services
                 return "Fail";
             }
         }
-        public string BkackListUPDATE(BkackListModels _BkackList, string Mode)
+        public string BlackListUPDATE(BlackListModels _BlackList, string Mode)
         {
             try
             {
                 var command = _context.Database.GetDbConnection().CreateCommand();
                 command.CommandText = "SP_BLACK_LIST_REGISTER_INSERT_EDIT_DELETE";
-                command.Parameters.Add(new SqlParameter("@Surname", _BkackList.Surname));
-                command.Parameters.Add(new SqlParameter("@Given_name", _BkackList.Given_name));
-                command.Parameters.Add(new SqlParameter("@Birth_of_dat", _BkackList.Birth_of_date));
-                command.Parameters.Add(new SqlParameter("@Sex", _BkackList.Sex));
-                command.Parameters.Add(new SqlParameter("@Country", _BkackList.Country));
-                command.Parameters.Add(new SqlParameter("@Birth_Countryt", _BkackList.Birth_Country));
-                command.Parameters.Add(new SqlParameter("@Document_No", _BkackList.Document_No));
-                command.Parameters.Add(new SqlParameter("@Remarks", _BkackList.Remarks));
-                command.Parameters.Add(new SqlParameter("@ID", _BkackList.Id));
+                command.Parameters.Add(new SqlParameter("@Surname", _BlackList.Surname));
+                command.Parameters.Add(new SqlParameter("@Given_name", _BlackList.Given_name));
+                command.Parameters.Add(new SqlParameter("@Birth_of_dat", _BlackList.Birth_of_date));
+                command.Parameters.Add(new SqlParameter("@Sex", _BlackList.Sex));
+                command.Parameters.Add(new SqlParameter("@Country", _BlackList.Country));
+                command.Parameters.Add(new SqlParameter("@Birth_Countryt", _BlackList.Birth_Country));
+                command.Parameters.Add(new SqlParameter("@Document_No", _BlackList.Document_No));
+                command.Parameters.Add(new SqlParameter("@Remarks", _BlackList.Remarks));
+                command.Parameters.Add(new SqlParameter("@ID", _BlackList.Id));
                 command.CommandType = CommandType.StoredProcedure;
                 _context.Database.OpenConnection();
                 var result = command.ExecuteScalar();
@@ -60,7 +61,7 @@ namespace Immigration.Services
             }
         }
   
-        public DataTable BkackListSelect(long _ID)
+        public DataTable BlackListSelect(long _ID)
         {
             try
             {

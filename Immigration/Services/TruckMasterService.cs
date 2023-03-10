@@ -15,6 +15,7 @@ namespace Immigration.Services
             {
                 var command = _context.Database.GetDbConnection().CreateCommand();
                 command.CommandText = "SP_TRUCK_MASTER_DATA_INSERT_UPDATE_DELETE";
+                command.Parameters.Add(new SqlParameter("@ID",Convert.ToInt64("0")));
                 command.Parameters.Add(new SqlParameter("@TRUCK_LICENCE_PLATE_NO", _TruckMaster.Truck_No));
                 command.Parameters.Add(new SqlParameter("@TRUCK_TYPE", _TruckMaster.Truck_Type));
                 command.Parameters.Add(new SqlParameter("@COMPANY_NAME", _TruckMaster.Truck_Name));
