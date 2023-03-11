@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+@{
+    ViewData["Title"] = "Master Data";
+}
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="~/css/Report.css" asp-append-version="true" />
+</head>
+<body>
+    <section>
+        <h2 class="title">ສະຖິຕິຜູ້ໂດຍສານນຳປື້ມຜ່ານແດນເຂົ້າ-ອອກ</h2>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="mb-3">
+                    <label for="startdate" class="form-label">Search from start date</label>
+                    <input type="date" class="form-control form-control-sm" id="startdate" placeholder="">
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="mb-3">
+                    <label for="enddate" class="form-label">to end date</label>
+                    <input type="date" class="form-control form-control-sm" id="enddate" placeholder="">
+                </div>
+            </div>
+        </div>
+        <br />
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th rowspan="2" style="text-align:center;">ລ/ດ</th>
+                    <th rowspan="2" style="text-align:center;">ສັນຊາດ</th>
+                    <th colspan="2" style="text-align:center;">ລວມ</th>
+                    <th colspan="2" style="text-align:center;">ຊາຍ</th>
+                    <th colspan="2" style="text-align:center;">ຍິງ</th>
+                    <th colspan="2" style="text-align:center;">ເດັກນ້ອຍ</th>
+                    <th colspan="2" style="text-align:center;">ທາງການ</th>
+                    <th colspan="2" style="text-align:center;">ທ່ອງທ່ຽວ</th>
+                    <th colspan="2" style="text-align:center;">ການຂ້າ</th>
+                    <th colspan="2" style="text-align:center;">ປີ່ນປົ່ວ</th>
+                </tr>
+                <tr>
+                    <th style="text-align:center;">ເຂົ້າ</th>
+                    <th style="text-align:center;">ອອກ</th>
+                    <th style="text-align:center;">ເຂົ້າ</th>
+                    <th style="text-align:center;">ອອກ</th>
+                    <th style="text-align:center;">ເຂົ້າ</th>
+                    <th style="text-align:center;">ອອກ</th>
+                    <th style="text-align:center;">ເຂົ້າ</th>
+                    <th style="text-align:center;">ອອກ</th>
+                    <th style="text-align:center;">ເຂົ້າ</th>
+                    <th style="text-align:center;">ອອກ</th>
+                    <th style="text-align:center;">ເຂົ້າ</th>
+                    <th style="text-align:center;">ອອກ</th>
+                    <th style="text-align:center;">ເຂົ້າ</th>
+                    <th style="text-align:center;">ອອກ</th>
+                    <th style="text-align:center;">ເຂົ້າ</th>
+                    <th style="text-align:center;">ອອກ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td >1</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>mdo</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>mdo</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>mdo</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>mdo</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>mdo</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+</body>
+</html>
