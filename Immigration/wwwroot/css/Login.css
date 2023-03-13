@@ -2,13 +2,47 @@
  
 }
 
+:root {
+    --color-primary: #002440; /* #cb8c25 #002440 */
+    --color-second: #e9eaeb; /* #773c00 #e9eaeb; */
+    --color-yellow: #fca531; /* #fca531; */
+    --color-white: #fff;
+    --color-black: black;
+}
+
 section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     height: 100vh;
     font-family: 'Noto Sans Lao';
+    background-color: var(--color-primary);
+}
+
+.loginbox-left {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-second);
+}
+
+.imgleft {
+    width: 100%;
+    height: 100vh;
+}
+
+.loginbox-right {
+    height: 100vh;
+    color: var(--color-second);
+}
+
+.logologin {
+    width: 40%;
+    height: auto;
+    margin: 30px 0px;
+}
+
+.formbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .loginbox {
@@ -16,14 +50,13 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 400px;
-    height: 450px;
+    width: 100%;
+    height: 100%;
     border-radius: 10px;
-    /* border: 2px solid #2d3192;*/
+    border: 2px solid #2d3192;
 }
 h2 {
     font-size: 2em;
-    color: #bdc3c7;
     text-align: center;
     font-weight: bold;
 }
@@ -31,7 +64,7 @@ h2 {
     position: relative;
     margin: 30px 0;
     width: 310px;
-    border-bottom: 2px solid #bdc3c7;
+    border-bottom: 2px solid var(--color-second);
 }
 
     .inputbox label {
@@ -39,7 +72,7 @@ h2 {
         top: 50%;
         left: 5px;
         transform: translateY(-50%);
-        color: #bdc3c7;
+        color: var(--color-second);
         font-size: 1em;
         pointer-events: none;
         transition: .5s;
@@ -62,12 +95,12 @@ input:focus ~ label, input:valid ~ label {
 
 .forget {
     font-size: .9em;
-    color: #bdc3c7;
+    color: var(--color-second);
     margin: 25px 0 10px;
 }
 
     .forget p a {
-        color: #bdc3c7;
+        color: var(--color-second);
         font-weight: 600;
     }
 
@@ -79,11 +112,11 @@ button {
     width: 70%;
     height: 40px;
     border-radius: 10px;
-    background: #bdc3c7;
+    background-color: var(--color-yellow);
     border: none;
     outline: none;
     cursor: pointer;
     font-size: 1em;
     font-weight: 600;
-    color: #fff;
+    color: var(--color-primary);
 }
