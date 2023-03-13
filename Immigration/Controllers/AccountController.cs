@@ -15,5 +15,11 @@ namespace Immigration.Controllers
         {
             return View();
         }
+
+        public IActionResult Forgotpassword()
+        {
+            return View();
+        }
+
     }
 }
