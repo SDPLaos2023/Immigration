@@ -1,10 +1,11 @@
-﻿@model TruckMasterModel;
-<!DOCTYPE html>
+﻿@using System.Data;
+@model TruckMasterModel;
 @{
     ViewData["Title"] = "Passport";
     var Mode = ViewBag.Mode;
-
 }
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -36,16 +37,8 @@
                     <input type="text" class="form-control" id="comname" placeholder="" asp-for="Truck_Name"> 
                 </div>
             </div>
-            <div class="col-md-3">
-                 @*   @if (Mode == "INSERT")
-                    {*@
-                        <button>Add</button>
-                   @* }
-                    else
-                    {
-                        
-                    }*@
-
+            <div class="col-md-3">                  
+             <button>Add</button>                  
             </div>
         </div>
         <div>
@@ -60,17 +53,20 @@
                     </tr>
                 </thead>
                 <tbody>
-                  @*  @foreach (var item in  ViewBag.dateTruck)
+                    @*@foreach (var item in ViewBag.dateTruck)
                     {
                         <tr>
                         <th scope="row">1</th>
+                        <td>@item["ID"].ToString();</td>
                         <td>@item["TRUCK_LICENCE_PLATE_NO"].ToString();</td>
                         <td>@item["TRUCK_TYPE"].ToString();</td>
                         <td>@item["COMPANY_NAME"].ToString();</td>
                         <td><button type="button">Update</button><button>Delete</button></td>
                         </tr>
-                     }*@                                      
-                </tbody>
+                    }  
+                    *@
+                   
+                    </tbody>
             </table>
         </div>
         </form>
