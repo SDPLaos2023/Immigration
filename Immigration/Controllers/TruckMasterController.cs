@@ -1,6 +1,7 @@
 ﻿using Immigration.Models;
 using Immigration.Services;
 using Microsoft.AspNetCore.Mvc;
+using System.Data;
 
 namespace Immigration.Controllers
 {
@@ -13,24 +14,32 @@ namespace Immigration.Controllers
         }
 
         [HttpGet]
-        public IActionResult BorderPass(long ID)
+        public IActionResult TruckMaster(long ID)
         {
+            if (ID == null)
+            {
+                ViewBag.Mode = "INSERT";
+            }            
             var _TruckMaster = new TruckMasterModel();
-            //Select Passport Register
+        
             var _dataTable = oTruckMasterService.TruckMasterSelect(ID);
+            // var User = oAccountService.SystemUserSelect(accountModel);
+            //if (_dataTable.Rows.Count > 0)
+            //    foreach (DataRow item in _dataTable.Rows)
+            //    {
+            //        _TruckMaster.Truck_No = item["TRUCK_LICENCE_PLATE_NO"].ToString();
+            //        _TruckMaster.Truck_Type = item["TRUCK_TYPE"].ToString();
+            //        _TruckMaster.Truck_Name = item["COMPANY_NAME"].ToString();
+            //    }
 
-            return View(_TruckMaster);
+            ViewBag.dateTruck = _dataTable;
+               return View(_TruckMaster);
         }
 
         [HttpPost]
-        public IActionResult TruckMaster()
+        public IActionResult TruckMaster(TruckMasterModel truckMasterModel)
         {
-            var _TruckMaster = new TruckMasterModel();
-            _TruckMaster.Truck_No = "พล.80-5512";
-            _TruckMaster.Truck_Type = "6 ล้อ";
-            _TruckMaster.Truck_Name = "AA";
-                       
-            oTruckMasterService.TruckMasterInsert(_TruckMaster,"INSERT");
+            oTruckMasterService.TruckMasterInsert(truckMasterModel, "INSERT");
             return View();
         }
     }

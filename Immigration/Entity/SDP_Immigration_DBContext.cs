@@ -28,8 +28,18 @@ namespace Immigration.Entity
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Server=MSI\\SQLEXPRESS;Database=SDP_Immigration_DB;user id=sa;pwd=sugarps2;Trusted_Connection=True;");
+                //optionsBuilder.UseSqlServer("Server=MSI\\SQLEXPRESS;Database=SDP_Immigration_DB;user id=sa;pwd=sugarps2;Trusted_Connection=True;");
+                string Connection = GetConfiguration();
+                optionsBuilder.UseSqlServer(Connection);
             }
+        }
+
+        public string GetConfiguration()
+        {
+            var builder = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
+            var configuration = builder.Build();
+            var Connect = configuration.GetSection("ConnectionStrings").GetSection("DBContext").Value;
+            return Connect;
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

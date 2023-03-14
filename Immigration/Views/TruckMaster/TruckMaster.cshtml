@@ -1,5 +1,80 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model TruckMasterModel;
+<!DOCTYPE html>
 @{
+    ViewData["Title"] = "Passport";
+    var Mode = ViewBag.Mode;
+
 }
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="~/css/Register.css" asp-append-version="true" />
+</head>
+<body>
+    <section>
+        <form id="Acccountform" asp-controller="TruckMaster" asp-action="TruckMaster" onkeydown="return event.key != 'Enter';" method="post" enctype="multipart/form-data">
+        <h2 class="title">Passport Register</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="mb-3">
+                    <label for="license" class="form-label">License Plate No</label>
+                    <input type="text" class="form-control" id="license" placeholder="" asp-for="Truck_No">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label for="type" class="form-label">Truck type</label>
+                <select class="form-select" aria-label="Default select example" id="type" asp-for="Truck_Type">
+                    <option selected>Open this select menu</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <div class="mb-3">
+                    <label for="comname" class="form-label">Company name</label>
+                    <input type="text" class="form-control" id="comname" placeholder="" asp-for="Truck_Name"> 
+                </div>
+            </div>
+            <div class="col-md-3">
+                 @*   @if (Mode == "INSERT")
+                    {*@
+                        <button>Add</button>
+                   @* }
+                    else
+                    {
+                        
+                    }*@
+
+            </div>
+        </div>
+        <div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  @*  @foreach (var item in  ViewBag.dateTruck)
+                    {
+                        <tr>
+                        <th scope="row">1</th>
+                        <td>@item["TRUCK_LICENCE_PLATE_NO"].ToString();</td>
+                        <td>@item["TRUCK_TYPE"].ToString();</td>
+                        <td>@item["COMPANY_NAME"].ToString();</td>
+                        <td><button type="button">Update</button><button>Delete</button></td>
+                        </tr>
+                     }*@                                      
+                </tbody>
+            </table>
+        </div>
+        </form>
+    </section>
+    
+</body>
+</html>
