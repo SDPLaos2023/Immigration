@@ -61,7 +61,7 @@ namespace Immigration.Services
             }
         }
 
-        public DataTable BkackListSelect(long _ID)
+        public DataTable BlackListSelect(long _ID)
         {
             try
             {
