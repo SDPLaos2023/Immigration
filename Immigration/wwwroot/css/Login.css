@@ -111,7 +111,7 @@ input:focus ~ label, input:valid ~ label {
 button {
     width: 70%;
     height: 40px;
-    border-radius: 10px;
+    border-radius: 10px !important;
     background-color: var(--color-yellow);
     border: none;
     outline: none;
