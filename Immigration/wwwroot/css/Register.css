@@ -8,9 +8,11 @@ section {
 }
 
 :root {
-    --color-primary: #0073ff;
-    --color-white: #e9e9e9;
-    --color-black: #141d28;
+    --color-primary: #002440; /* #cb8c25 #002440 */
+    --color-second: #e9eaeb; /* #773c00 #e9eaeb; */
+    --color-yellow: #fca531; /* #fca531; */
+    --color-white: #fff;
+    --color-black: black;
 }
 
 .title{
