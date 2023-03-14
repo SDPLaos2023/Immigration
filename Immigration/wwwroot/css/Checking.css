@@ -3,38 +3,56 @@
 }
 
 section {
-    margin: 0px 20px;
+    padding: 0px 20px;
     font-family: 'Noto Sans Lao';
+    background-color: var(--color-second);
 }
 
 :root {
-    --color-primary: #0073ff;
-    --color-white: #e9e9e9;
-    --color-black: #141d28;
+    --color-primary: #002440; /* #cb8c25 #002440 */
+    --color-second: #e9eaeb; /* #773c00 #e9eaeb; */
+    --color-yellow: #fca531; /* #fca531; */
+    --color-white: #fff;
+    --color-black: black;
+    --color-red: #DC4C64;
+    --color-green: #14A44D;
+    --color-yellow-2: #E4A11B; 
 }
 
 .title {
+    color: var(--color-yellow);
     padding: 5px 0px;
-    margin: 10px 0px;
+    margin: 0px 0px 10px 0px;
     font-weight: bold;
     width: 100%;
     text-align: center;
 }
 
-.headerbox{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+.headerbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .perinfobox {
-    border-radius: 10px 0px 0px 10px;
-    padding: 5px;
-    background-color: rgba(0,0,0,0.05);
+    border-radius: 20px;
+    padding: 10px;
+    background-color: var(--color-primary);
+    border: solid 5px var(--color-yellow);
 }
 
 .perinfobox-left{
     /*background-color:red;*/
+}
+
+.userimg {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: var(--color-primary);
+    border: solid 5px var(--color-yellow);
+    width: 90%;
+    height: auto;
+    border-radius:10px;
 }
 
 .statusbox {
@@ -42,7 +60,7 @@ section {
     margin: 10px 0px;
     border-radius: 5px;
     border: solid 2px green;
-    color: black;
+    color: var(--color-second);
 }
 
 .statusbox span{
@@ -53,50 +71,50 @@ section {
 .perinfobox-right {
     /*background-color: green;*/
 }
+
+.form-label {
+    color: var(--color-second);
+}
+
 .cambox {
+    border-radius: 20px;
     padding: 10px;
-    background-color: rgba(0,0,0,0.1);
+    background-color: var(--color-primary);
+    border: solid 5px var(--color-yellow);
 }
 
 .btnTP {
     padding: 5px 10px;
     height: 40px;
     border-radius: 10px;
-    background: #bdc3c7;
     border: none;
     outline: none;
     cursor: pointer;
     font-size: 1em;
     font-weight: 600;
-    color: #fff;
+    color: var(--color-primary);
+    background-color: var(--color-yellow);
 }
 
 .btnCP {
     padding: 5px 10px;
     height: 40px;
     border-radius: 10px;
-    background: #bdc3c7;
     border: none;
     outline: none;
     cursor: pointer;
     font-size: 1em;
     font-weight: 600;
-    color: #fff;
-}
-
-.userimg {
-    margin-bottom: 20px;
-    padding: 10px;
-    background-color: var(--color-white);
-    border: solid 5px var(--color-black);
-    width: 90%;
-    height: auto;
+    color: var(--color-primary);
+    background-color: var(--color-yellow);
 }
 
 .follbox {
+    height: 885px;
+    border-radius: 20px;
     padding: 10px;
-    border-radius: 0px 10px 10px 0px;
-    background-color: rgba(0,0,0,0.05);
+    background-color: var(--color-primary);
+    border: solid 5px var(--color-yellow);
 }
 
 .btnadd {
@@ -104,13 +122,13 @@ section {
     padding: 5px 10px;
     height: 40px;
     border-radius: 10px;
-    background: #bdc3c7;
     border: none;
     outline: none;
     cursor: pointer;
     font-size: 1em;
     font-weight: 600;
-    color: #fff;
+    color: var(--color-primary);
+    background-color: var(--color-yellow);
 }
 
 .actionbox {
@@ -125,11 +143,13 @@ section {
 .btnedit {
     margin: 0px 5px;
     padding: 0px;
+    color: var(--color-yellow-2);
 }
 
 .btndelete {
     margin: 0px 5px;
     padding: 0px;
+    color: var(--color-red);
 }
 
 .btnacc {
@@ -138,13 +158,13 @@ section {
     padding: 5px 10px;
     height: 40px;
     border-radius: 10px;
-    background-color: green;
     border: none;
     outline: none;
     cursor: pointer;
     font-size: 1em;
     font-weight: 600;
-    color: #fff;
+    color: var(--color-white);
+    background-color: var(--color-green);
 }
 .btnrej {
     width: 50%;
@@ -152,13 +172,13 @@ section {
     padding: 5px 10px;
     height: 40px;
     border-radius: 10px;
-    background-color: red;
     border: none;
     outline: none;
     cursor: pointer;
     font-size: 1em;
     font-weight: 600;
-    color: #fff;
+    color: var(--color-white);
+    background-color: var(--color-red);
 }
 .btncleardoc {
     width: 50%;
@@ -166,13 +186,13 @@ section {
     padding: 5px 10px;
     height: 40px;
     border-radius: 10px;
-    background: #bdc3c7;
     border: none;
     outline: none;
     cursor: pointer;
     font-size: 1em;
     font-weight: 600;
-    color: #fff;
+    color: var(--color-primary);
+    background-color: var(--color-yellow);
 }
 .btndeletedoc {
     width: 50%;
@@ -180,11 +200,15 @@ section {
     padding: 5px 10px;
     height: 40px;
     border-radius: 10px;
-    background: #bdc3c7;
     border: none;
     outline: none;
     cursor: pointer;
     font-size: 1em;
     font-weight: 600;
-    color: #fff;
+    color: var(--color-primary);
+    background-color: var(--color-yellow);
+}
+
+.table {
+    color: var(--color-yellow);
 }
