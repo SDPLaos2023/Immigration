@@ -15,10 +15,12 @@ namespace Immigration.Controllers
         [HttpGet]
         public IActionResult BlackList(long _ID)
         {
-            var _BkackList = new BlackListModels();
-            //Select Passport Register
+            if (_ID == null)
+            {
+                ViewBag.Mode = "INSERT";
+            }
+            var _BkackList = new BlackListModels();          
             var _dataTable = oTruckMasterService.BlackListSelect(_ID);
-
             return View(_BkackList);
         }
         [HttpPost]

@@ -18,12 +18,12 @@ namespace Immigration.Services
                 command.Parameters.Add(new SqlParameter("@ID", Convert.ToInt64("0")));
                 command.Parameters.Add(new SqlParameter("@Surname", _BlackList.Surname));
                 command.Parameters.Add(new SqlParameter("@Given_name", _BlackList.Given_name));
-                command.Parameters.Add(new SqlParameter("@Birth_of_date",Convert.ToDateTime( _BlackList.Birth_of_date)));
+                command.Parameters.Add(new SqlParameter("@Birth_of_date", _BlackList.Birth_of_date+" "+"00:00:00"));
                 command.Parameters.Add(new SqlParameter("@Sex", _BlackList.Sex));
                 command.Parameters.Add(new SqlParameter("@Country", _BlackList.Country));
-                command.Parameters.Add(new SqlParameter("@Birth_Countryt", _BlackList.Birth_Country));
+                command.Parameters.Add(new SqlParameter("@Birth_Country", _BlackList.Birth_Country));
                 command.Parameters.Add(new SqlParameter("@Document_No", _BlackList.Document_No));
-                command.Parameters.Add(new SqlParameter("@Remarks", _BlackList.Remarks));
+                command.Parameters.Add(new SqlParameter("@Remarks", "เพิ่มช่องหมายเหตุ"));
                 command.Parameters.Add(new SqlParameter("@Mode", Mode));
                 command.CommandType = CommandType.StoredProcedure;
                 _context.Database.OpenConnection();
@@ -46,7 +46,7 @@ namespace Immigration.Services
                 command.Parameters.Add(new SqlParameter("@Birth_of_dat", _BlackList.Birth_of_date));
                 command.Parameters.Add(new SqlParameter("@Sex", _BlackList.Sex));
                 command.Parameters.Add(new SqlParameter("@Country", _BlackList.Country));
-                command.Parameters.Add(new SqlParameter("@Birth_Countryt", _BlackList.Birth_Country));
+                command.Parameters.Add(new SqlParameter("@Birth_Country", _BlackList.Birth_Country));
                 command.Parameters.Add(new SqlParameter("@Document_No", _BlackList.Document_No));
                 command.Parameters.Add(new SqlParameter("@Remarks", _BlackList.Remarks));
                 command.Parameters.Add(new SqlParameter("@ID", _BlackList.Id));
