@@ -21,6 +21,38 @@ namespace Immigration.Controllers
         {
             return View();
         }
+        public IActionResult Psgborderpassbook()
+        {
+            return View();
+        }
+        public IActionResult Psgborderpasspaper() { 
+        return View();
+        }
+
+        public IActionResult Psgborderpasspassport()
+        {
+            return View();
+        }
+
+        public IActionResult Psgborderpass()
+        {
+            return View();
+        }
+
+        public IActionResult Psgtemborder()
+        {
+            return View();
+        }
+
+        public IActionResult Vehicle()
+        {
+            return View();
+        }
+
+        public IActionResult Paslist()
+        {
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

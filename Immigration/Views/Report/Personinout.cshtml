@@ -1,12 +1,12 @@
 ﻿<!DOCTYPE html>
 @{
-    ViewData["Title"] = "Master Data";
+    ViewData["Title"] = "IN-OUT Information";
 }
 
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="~/css/Personinout.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Report.css" asp-append-version="true" />
 </head>
 <body>
     <section>
@@ -33,44 +33,48 @@
                 <label>ສັນຊາດ: <span>AAAAAAAAA</span></label>
             </div>
             <div class="col-md-4">
-                <h5>Note</h5>
+                <h5>ໝາຍເຫດ</h5>
                 <label>Black List</label>
             </div>
         </div>
         <br />
         <h5>ຖ້ຽວເຂົ້າ-ອອກ</h5>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">ທິດທາງ</th>
-                    <th scope="col">ເວລາວັນທີ</th>
-                    <th scope="col">ດ່ານເຂົ້າອອກ</th>
-                    <th scope="col">ເລກຟອມ</th>
-                    <th scope="col">ປະເພດວີຊາ</th>
-                    <th scope="col">ຈຸດປະສົງ</th>
-                    <th scope="col">ພັກຢູ່ລາວຮອດ</th>
-                    <th scope="col">ທີ່ຢູ່ ສປປ ລາວ</th>
-                    <th scope="col">ທີ່ພັກຄັ້ງລ່າສຸດ</th>
-                    <th scope="col">ຜູ້ແຈ້ງ</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td >1</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>mdo</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>mdo</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>
-                       mdo
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">ທິດທາງ</th>
+                        <th scope="col">ເວລາວັນທີ</th>
+                        <th scope="col">ດ່ານເຂົ້າອອກ</th>
+                        <th scope="col">ເລກຟອມ</th>
+                        <th scope="col">ປະເພດວີຊາ</th>
+                        <th scope="col">ຈຸດປະສົງ</th>
+                        <th scope="col">ພັກຢູ່ລາວຮອດ</th>
+                        <th scope="col">ທີ່ຢູ່ ສປປ ລາວ</th>
+                        <th scope="col">ທີ່ພັກຄັ້ງລ່າສຸດ</th>
+                        <th scope="col">ຜູ້ແຈ້ງ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>mdo</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>mdo</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>
+                            mdo
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        
     </section>
 
 </body>

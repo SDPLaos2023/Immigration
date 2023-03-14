@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+@{
+    ViewData["Title"] = "Passenger Pass By Temporary Border Pass";
+}
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="~/css/Report.css" asp-append-version="true" />
+</head>
+<body>
+    <section>
+        <h2 class="title">ສະຖິຕິຜູ້ໂດຍສານນຳໃຊ້ຫນັງສືຜ່ານແດນ(Temporary Border Pass) ເຂົ້າ-ອອກ</h2>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="mb-3">
+                    <label for="startdate" class="form-label">Search from start date</label>
+                    <input type="date" class="form-control form-control-sm" id="startdate" placeholder="">
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="mb-3">
+                    <label for="enddate" class="form-label">to end date</label>
+                    <input type="date" class="form-control form-control-sm" id="enddate" placeholder="">
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th rowspan="2" style="text-align:center;">ລ/ດ</th>
+                        <th rowspan="2" style="text-align:center;">ສັນຊາດ</th>
+                        <th colspan="2" style="text-align:center;">ລວມ</th>
+                        <th colspan="2" style="text-align:center;">ຊາຍ</th>
+                        <th colspan="2" style="text-align:center;">ຍິງ</th>
+                        <th colspan="2" style="text-align:center;">ເດັກ</th>
+                        <th colspan="2" style="text-align:center;">ທ່ອງທ່ຽວ</th>
+                        <th colspan="2" style="text-align:center;">ລັດຖະການ</th>
+                        <th colspan="2" style="text-align:center;">ທຸລະກິດ</th>
+                        <th colspan="2" style="text-align:center;">ກິລາ</th>
+                        <th colspan="2" style="text-align:center;">ປະຊຸມ/ຝຶກອົບຮົມ</th>
+                        <th colspan="2" style="text-align:center;">ຄ້າຂາຍ</th>
+                        <th colspan="2" style="text-align:center;">ປີ່ນປົວ</th>
+                        <th colspan="2" style="text-align:center;">ຄົນຂັນລົດ</th>
+                        <th colspan="2" style="text-align:center;">ແອັດລົດ</th>
+                        <th colspan="2" style="text-align:center;">ຄົນຂັນລົດ, ແອັດລົດ</th>
+                        <th colspan="2" style="text-align:center;">ຖືກສົ່ງກັບ</th>
+                        <th colspan="2" style="text-align:center;">ຄົນເສຍຊີວິດ</th>
+
+                    </tr>
+                    <tr>
+                        <th style="text-align:center;">ເຂົ້າ</th>
+                        <th style="text-align:center;">ອອກ</th>
+                        <th style="text-align:center;">ເຂົ້າ</th>
+                        <th style="text-align:center;">ອອກ</th>
+                        <th style="text-align:center;">ເຂົ້າ</th>
+                        <th style="text-align:center;">ອອກ</th>
+                        <th style="text-align:center;">ເຂົ້າ</th>
+                        <th style="text-align:center;">ອອກ</th>
+                        <th style="text-align:center;">ເຂົ້າ</th>
+                        <th style="text-align:center;">ອອກ</th>
+                        <th style="text-align:center;">ເຂົ້າ</th>
+                        <th style="text-align:center;">ອອກ</th>
+                        <th style="text-align:center;">ເຂົ້າ</th>
+                        <th style="text-align:center;">ອອກ</th>
+                        <th style="text-align:center;">ເຂົ້າ</th>
+                        <th style="text-align:center;">ອອກ</th>
+                        <th style="text-align:center;">ເຂົ້າ</th>
+                        <th style="text-align:center;">ອອກ</th>
+                        <th style="text-align:center;">ເຂົ້າ</th>
+                        <th style="text-align:center;">ອອກ</th>
+                        <th style="text-align:center;">ເຂົ້າ</th>
+                        <th style="text-align:center;">ອອກ</th>
+                        <th style="text-align:center;">ເຂົ້າ</th>
+                        <th style="text-align:center;">ອອກ</th>
+                        <th style="text-align:center;">ເຂົ້າ</th>
+                        <th style="text-align:center;">ອອກ</th>
+                        <th style="text-align:center;">ເຂົ້າ</th>
+                        <th style="text-align:center;">ອອກ</th>
+                        <th style="text-align:center;">ເຂົ້າ</th>
+                        <th style="text-align:center;">ອອກ</th>
+                        <th style="text-align:center;">ເຂົ້າ</th>
+                        <th style="text-align:center;">ອອກ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>AUS</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>VNM</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>CAN</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>D</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr>
+                        <th colspan="2" style="text-align:center;">ລວມ</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </section>
+
+</body>
+</html>

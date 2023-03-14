@@ -1,0 +1,277 @@
+﻿<!DOCTYPE html>
+@{
+    ViewData["Title"] = "Passenger Pass By Passport";
+}
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="~/css/Report.css" asp-append-version="true" />
+</head>
+<body>
+    <section>
+        <h2 class="title">ສະຖິຕິຜູ້ໂດຍສານນຳໃຊ້ ປື້ມຜ່ານແດນ(PASSPORT) ເຂົ້າ-ອອກ</h2>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="mb-3">
+                    <label for="startdate" class="form-label">Search from start date</label>
+                    <input type="date" class="form-control form-control-sm" id="startdate" placeholder="">
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="mb-3">
+                    <label for="enddate" class="form-label">to end date</label>
+                    <input type="date" class="form-control form-control-sm" id="enddate" placeholder="">
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th rowspan="3" style="text-align:center;">ລ/ດ</th>
+                        <th rowspan="3" style="text-align:center;">ສັນ<br />ຊາດ</th>
+                        <th colspan="2" style="text-align:center;">ລວມ</th>
+                        <th colspan="2" style="text-align:center;">ຊາຍ</th>
+                        <th colspan="2" style="text-align:center;">ຍິງ</th>
+                        <th colspan="4" style="text-align:center;">ເດັກ</th>
+                        <th colspan="2" style="text-align:center;">ການທູດ</th>
+                        <th colspan="2" rowspan="2" style="text-align:center;">ຍົກເວັ້ນ<br />ການທູດ</th>
+                        <th colspan="2" style="text-align:center;">ລັດຖະການ</th>
+                        <th colspan="2" style="text-align:center;">ອັດທະຍາໄສ</th>
+                        <th colspan="2" style="text-align:center;">ຊ່ຽວຊານ</th>
+                        <th colspan="2" style="text-align:center;">ນັກສຶກສາ</th>
+                        <th colspan="2" style="text-align:center;">ນັກຂ່າວ</th>
+                        <th colspan="2" rowspan="2" style="text-align:center;">ຍົກເວັ້ນ<br />ລັດຖະການ</th>
+                        <th colspan="2" style="text-align:center;">ທຸລະກິດ</th>
+                        <th colspan="2" style="text-align:center;">ແຮງງານ</th>
+                        <th colspan="2" style="text-align:center;">ທ່ອງທ່ຽວ</th>
+                        <th colspan="2" rowspan="2" style="text-align:center;">ຍົກເວັ້ນ<br />ທ່ອງທ່ຽວ</th>
+                        <th colspan="2" style="text-align:center;">ຢ້ຽວຢາມ</th>
+                        <th colspan="2" style="text-align:center;">ຖາວອນ</th>
+                        <th colspan="2" style="text-align:center;">ຜ່ານ</th>
+                        <th colspan="2" style="text-align:center;">ຜົວເມຍ</th>
+                        <th colspan="2" style="text-align:center;">ໄລຍະຍາວ</th>
+                        <th colspan="6" style="text-align:center;">ຄົນຂັນລົດ, ແອັດລົດ</th>
+                        <th colspan="2" rowspan="2" style="text-align:center;">ຖືກສົ່ງກັບ</th>
+                        <th colspan="2" rowspan="2" style="text-align:center;">ຄົນເສຍ<br />ຊີວິດ</th>
+                        <th colspan="2" rowspan="2" style="text-align:center;">ຂະບວນລົດ<br />ຄາລະວານ</th>
+                    </tr>
+                    <tr>
+                        <th rowspan="2" style="text-align:center;">ຂ</th>
+                        <th rowspan="2" style="text-align:center;">ອ</th>
+                        <th rowspan="2" style="text-align:center;">ຂ</th>
+                        <th rowspan="2" style="text-align:center;">ອ</th>
+                        <th rowspan="2" style="text-align:center;">ຂ</th>
+                        <th rowspan="2" style="text-align:center;">ອ</th>
+                        <th colspan="2" style="text-align:center;">ຊາຍ</th>
+                        <th colspan="2" style="text-align:center;">ຍິງ</th>
+                        <th colspan="2" style="text-align:center;">D-A1</th>
+                        <th colspan="2" style="text-align:center;">A-A2</th>
+                        <th colspan="2" style="text-align:center;">C-B1</th>
+                        <th colspan="2" style="text-align:center;">E-B2</th>
+                        <th colspan="2" style="text-align:center;">ST-B2</th>
+                        <th colspan="2" style="text-align:center;">M-B2</th>
+                        <th colspan="2" style="text-align:center;">NI-B2/I-B2</th>
+                        <th colspan="2" style="text-align:center;">LA-B2</th>
+                        <th colspan="2" style="text-align:center;">T-B3</th>
+                        <th colspan="2" style="text-align:center;">NI-B3</th>
+                        <th colspan="2" style="text-align:center;">P-B3</th>
+                        <th colspan="2" style="text-align:center;">TR-B3</th>
+                        <th colspan="2" style="text-align:center;">SP-B3</th>
+                        <th colspan="2" style="text-align:center;">IB3</th>
+                        <th colspan="2" style="text-align:center;">LA-B2</th>
+                        <th colspan="2" style="text-align:center;">T-b3</th>
+                        <th colspan="2" style="text-align:center;">ຍົກເວັ້ນ</th>
+                    </tr>
+                    <tr>
+                        <th style="text-align:center;">ຂ</th>
+                        <th style="text-align:center;">ອ</th>
+                        <th style="text-align:center;">ຂ</th>
+                        <th style="text-align:center;">ອ</th>
+                        <th style="text-align:center;">ຂ</th>
+                        <th style="text-align:center;">ອ</th>
+                        <th style="text-align:center;">ຂ</th>
+                        <th style="text-align:center;">ອ</th>
+                        <th style="text-align:center;">ຂ</th>
+                        <th style="text-align:center;">ອ</th>
+                        <th style="text-align:center;">ຂ</th>
+                        <th style="text-align:center;">ອ</th>
+                        <th style="text-align:center;">ຂ</th>
+                        <th style="text-align:center;">ອ</th>
+                        <th style="text-align:center;">ຂ</th>
+                        <th style="text-align:center;">ອ</th>
+                        <th style="text-align:center;">ຂ</th>
+                        <th style="text-align:center;">ອ</th>
+                        <th style="text-align:center;">ຂ</th>
+                        <th style="text-align:center;">ອ</th>
+                        <th style="text-align:center;">ຂ</th>
+                        <th style="text-align:center;">ອ</th>
+                        <th style="text-align:center;">ຂ</th>
+                        <th style="text-align:center;">ອ</th>
+                        <th style="text-align:center;">ຂ</th>
+                        <th style="text-align:center;">ອ</th>
+                        <th style="text-align:center;">ຂ</th>
+                        <th style="text-align:center;">ອ</th>
+                        <th style="text-align:center;">ຂ</th>
+                        <th style="text-align:center;">ອ</th>
+                        <th style="text-align:center;">ຂ</th>
+                        <th style="text-align:center;">ອ</th>
+                        <th style="text-align:center;">ຂ</th>
+                        <th style="text-align:center;">ອ</th>
+                        <th style="text-align:center;">ຂ</th>
+                        <th style="text-align:center;">ອ</th>
+                        <th style="text-align:center;">ຂ</th>
+                        <th style="text-align:center;">ອ</th>
+                        <th style="text-align:center;">ຂ</th>
+                        <th style="text-align:center;">ອ</th>
+                        <th style="text-align:center;">ຂ</th>
+                        <th style="text-align:center;">ອ</th>
+                        <th style="text-align:center;">ຂ</th>
+                        <th style="text-align:center;">ອ</th>
+                        <th style="text-align:center;">ຂ</th>
+                        <th style="text-align:center;">ອ</th>
+                        <th style="text-align:center;">ຂ</th>
+                        <th style="text-align:center;">ອ</th>
+                        <th style="text-align:center;">ຂ</th>
+                        <th style="text-align:center;">ອ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>AUS</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>VNM</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>CAN</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>D</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr>
+                        <th colspan="2" style="text-align:center;">ລວມ</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th> 
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th> 
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th> 
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th> 
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th> 
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                        <th style="text-align:center;">-</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </section>
+
+</body>
+</html>
