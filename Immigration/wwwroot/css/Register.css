@@ -5,6 +5,7 @@
 section {
     font-family: 'Noto Sans Lao';
     margin: 0px 20px;
+    --color-black: var(--color-second);
 }
 
 :root {
@@ -13,14 +14,18 @@ section {
     --color-yellow: #fca531; /* #fca531; */
     --color-white: #fff;
     --color-black: black;
+    --color-red: #DC4C64;
+    --color-green: #14A44D;
+    --color-yellow-2: #E4A11B;
 }
 
-.title{
+.title {
     padding: 10px 0px;
     margin: 10px 0px;
     font-weight: bold;
     width: 100%;
-    text-align:center;
+    text-align: center;
+    color: var(--color-yellow);
 }
 .regisbox {
     padding: 10px 0px;
@@ -32,26 +37,33 @@ section {
 
 .rightbox {
     padding: 0 50px;
-} 
+}
+
+.form-label {
+    color: var(--color-primary);
+}
 
 button {
     height: 40px;
-    padding:0px 20px;
+    padding: 0px 20px;
     border-radius: 10px;
-    background: #bdc3c7;
     border: none;
     outline: none;
     cursor: pointer;
     font-size: 1em;
     font-weight: 600;
-    color: #fff;
+    color: var(--color-primary);
+    background-color: var(--color-yellow);
 }
 
 .userimg {
     margin-bottom: 20px;
     padding: 10px;
-    background-color: var(--color-white);
-    border: solid 5px var(--color-black);
+    background-color: var(--color-primary);
+    border: solid 5px var(--color-yellow);
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
 }
 
 .fas {
@@ -71,9 +83,21 @@ button {
 .btnedit {
     margin: 0px 10px;
     padding: 0px;
+    color: var(--color-yellow-2) !important;
 }
 
 .btndelete {
     margin: 0px 10px;
     padding: 0px;
+    color: var(--color-red) !important;
+}
+
+.truckbox{
+    display:flex;
+    align-items:center;
+    height: 80px;
+}
+
+.table {
+    color: var(--color-primary);
 }
