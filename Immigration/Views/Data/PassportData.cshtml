@@ -1,0 +1,58 @@
+﻿@model PassportDataModel;
+<!DOCTYPE html>
+@{
+    ViewData["Title"] = "Passport Data";
+}
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="~/css/Data.css" asp-append-version="true" />
+</head>
+<body>
+    <section>
+        <h2 class="title">Master Data</h2>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Document No</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Surname</th>
+                        <th scope="col">Birth Of Date</th>
+                        <th scope="col">Sex</th>
+                        <th scope="col">Country</th>
+                        <th scope="col">Birth Country</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (int i = 0; i < Model.Id.Count; i++)
+                    {
+                        <tr>
+                            <td>@Model.Id[i]</td>
+                            <td>@Model.DocumentNo[i]</td>
+                            <td>@Model.Name[i]</td>
+                            <td>@Model.Surname[i]</td>
+                            <td>@Model.BirthOfDate[i]</td>
+                            <td>@Model.Sex[i]</td>
+                            <td>@Model.Country[i]</td>
+                            <td>@Model.BirthCountry[i]</td>
+                            <td>
+                                <div class="actionbox">
+                                    <a class="btnedit" href="@Url.Action("PassportRegister", "Passport", new{id=Model.Id[i]})"><i class="fas fa-pen-to-square"></i></a>
+                                    <a class="btndelete"><i class="fas fa-trash"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+
+    </section>
+
+</body>
+</html>

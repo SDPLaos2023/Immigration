@@ -10,29 +10,29 @@ namespace Immigration.Controllers
         public PassportController()
         {
 
-            
         }
         public IActionResult Index()
         {
+            ViewBag.Mode = "INSERT";
             return View();
         }
 
         [HttpGet]
         public IActionResult PassportRegister(long ID)
         {
-            var _passportRegister = new PassportRegisterModel();
             //Select Passport Register
-            var _dataTable = oPassportService.PassportRegisterSelect(ID);
-
-            return View();
+            var _dataTable = oPassportService.PassportRegisterSelect(ID, "Id");
+            var _model = oPassportService.PassportSetModel(_dataTable);
+            ViewBag.Mode = "EDIT";
+            return View("Index", _model);
         }
 
         [HttpPost]
-        public IActionResult PassportRegister(PassportRegisterModel _passportModel)
+        public JsonResult PassportRegister(PassportRegisterModel _passportModel, string Mode)
         {
             //Insert PassportRegister
-            oPassportService.PassportRegisterWithMode(_passportModel, "INSERT");
-            return View("Index");
+            oPassportService.PassportRegisterWithMode(_passportModel, Mode);
+            return Json(new { message = "Success" });
         }
     }
 }

@@ -23,20 +23,20 @@
                         <img class="logologin" src="https://sv1.picz.in.th/images/2023/02/01/LtnUu2.png" alt="LtnUu2.png" border="0" /> <br>
                     </center>
                     <div class="formbox">
-                        <form>
+                        <form asp-controller="Account" asp-action="Login" onkeydown="return event.key != 'Enter';" method="post" enctype="multipart/form-data">
                             <h2>ເຂົ້າສູ່ລະບົບ</h2>
                             <div class="inputbox">
-                                <input type="text" required>
+                                <input type="text" asp-for="UserName" required>
                                 <label for="">ຊື່ຜູ້ໃຊ້</label>
                             </div>
 
                             <div class="inputbox">
-                                <input type="password" required>
+                                <input type="password" asp-for="Password" required>
                                 <label for="">ລະຫັດຜ່ານ</label>
                             </div>
 
                             <div class="forget">
-                                <p><a asp-area="" asp-controller="Account" asp-action="Forgotpassword">ລືມລະຫັດຜ່ານ</a></p>
+                                <p><a asp-area="" asp-controller="" asp-action="Forgotpassword">ລືມລະຫັດຜ່ານ</a></p>
                             </div>
 
                     <center>
