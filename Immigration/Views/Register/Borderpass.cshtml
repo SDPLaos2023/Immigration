@@ -10,89 +10,107 @@
 </head>
 <body>
     <section>
-        <h2 class="title">Border Pass Register</h2>
+        <h2 class="title">Border Pass</h2>
         <div class="row regisbox">
-            <div class="col-md-6 leftbox">
+            <div class="col-md-4">
                <center>
-                    <img class="userimg" width="200" height="200" src="https://sv1.picz.in.th/images/2023/02/01/LtnUu2.png" alt="LtnUu2.png" border="0" /> <br>
-                    <div class="input-group mb-3">
-                        <input type="file" class="form-control" id="inputGroupFile01">
-                    </div>
+                    <img id="chosen-image" class="userimg" width="200" height="200" src="https://sv1.picz.in.th/images/2023/02/01/LtnUu2.png" alt="LtnUu2.png" border="0" /> <br>
+                    <div id="file-name" class="filename"></div>
+                    <input type="file" class="" id="upload-button" accept="">
+                    <label for="upload-button" class="uploadlabel"><i class="fas fa-upload"></i> ເລືອກຮູບ </label>
                 </center>
             </div>
-            <div class="col-md-6 rightbox">
+            <div class="col-md-4">
                 <div class="mb-3">
-                    <label for="name" class="form-label">Name</label>
+                    <label for="name" class="form-label">ຊື່</label>
                     <input type="text" class="form-control" id="name" placeholder="">
                 </div>
                 <div class="mb-3">
-                    <label for="surename" class="form-label">Surname</label>
+                    <label for="surename" class="form-label">ນາມສະກຸນ</label>
                     <input type="text" class="form-control" id="surename" placeholder="">
                 </div>
                 <div class="mb-3">
-                    <label for="birtofdate" class="form-label">Birt Of Date</label>
+                    <label for="birtofdate" class="form-label">ວັນ/ດືອນ/ປີ ເກີດ</label>
                     <input type="date" class="form-control" id="surename" placeholder="">
                 </div>
                 <div class="mb-3">
-                    <label for="sex" class="form-label">Sex</label>
-                    <select class="form-select" aria-label="Default select example" id="SEX">
-                        <option selected>Open this select menu</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
-                </div>
-                <div class="mb-3">
-                    <label for="country" class="form-label">Country</label>
-                    <select class="form-select" aria-label="Default select example" id="country">
-                        <option selected>Open this select menu</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
-                </div>
-                <div class="mb-3">
-                    <label for="village" class="form-label">Village</label>
-                    <select class="form-select" aria-label="Default select example" id="village">
-                        <option selected>Open this select menu</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
-                </div>
-                <div class="mb-3">
-                    <label for="district" class="form-label">District</label>
-                    <select class="form-select" aria-label="Default select example" id="district">
-                        <option selected>Open this select menu</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
-                </div>
-                <div class="mb-3">
-                    <label for="province" class="form-label">Province</label>
-                    <select class="form-select" aria-label="Default select example" id="province">
-                        <option selected>Open this select menu</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
-                </div>
-                <div class="mb-3">
-                    <label for="docno" class="form-label">Document No</label>
+                    <label for="docno" class="form-label">ເລກທີ ເອກະສານ</label>
                     <input type="text" class="form-control" id="docno" placeholder="">
                 </div>
                 <div class="mb-3">
-                    <label for="occupation" class="form-label">Occupation</label>
+                    <label for="occupation" class="form-label">ອາຊີບ</label>
                     <input type="text" class="form-control" id="occupation" placeholder="">
                 </div>
+                <br />
                 <center>
-                    <button>Save</button>
-                    <button>Clear</button>
+                    <button>ບັນທຶກ</button>
+                    <button>ລ້າງ</button>
                 </center>
+            </div>
+            <div class="col-md-4">
+                
+                <div class="mb-3">
+                    <label for="sex" class="form-label">ເພດ</label>
+                    <select class="form-select" aria-label="" id="sex">
+                        <option selected>ເລືອກ</option>
+                        <option value="1">ຊາຍ</option>
+                        <option value="2">ຍິງ</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="country" class="form-label">ປະເທດ</label>
+                    <select class="form-select" aria-label="" id="country">
+                        <option selected>ເລືອກ</option>
+                        <option value="1">ລາວ</option>
+                        <option value="2">ໄທ</option>
+                        <option value="3">ຈີນ</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="village" class="form-label">ບ້ານ</label>
+                    <select class="form-select" aria-label="Default select example" id="village">
+                        <option selected>ເລືອກ</option>
+                        <option value="1">ທາດຫຼວງ</option>
+                        <option value="2">ຮ່ອງແກ</option>
+                        <option value="3">ໂພນທັນ</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="district" class="form-label">ເມືອງ</label>
+                    <select class="form-select" aria-label="Default select example" id="district">
+                        <option selected>ເລືອກ</option>
+                        <option value="1">ໄຊເສດຖາ</option>
+                        <option value="2">ໄຊທານີ</option>
+                        <option value="3">ສີສັດຕະນາກ</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="province" class="form-label">ແຂວງ</label>
+                    <select class="form-select" aria-label="Default select example" id="province">
+                        <option selected>ເລືອກ</option>
+                        <option value="1">ນະຄອນຫຼວງ</option>
+                        <option value="2">ບໍລິຄຳໄຊ</option>
+                        <option value="3">ຄຳມ່ວນ</option>
+                    </select>
+                </div>
             </div>
         </div>
     </section>
-    
+
+    <script>
+        let uploadbutton = document.getElementById("upload-button");
+        let chosenimage = document.getElementById("chosen-image");
+        let filename = document.getElementById("file-name");
+
+        uploadbutton.onchange = () => {
+            let render = new FileReader();
+            render.readAsDataURL(uploadbutton.files[0]);
+            console.log(uploadbutton.files[0]);
+            render.onload = () => {
+                chosenimage.setAttribute("src", render.result);
+            }
+            filename.textContent = uploadbutton.files[0].name;
+        }
+    </script>
 </body>
 </html>
