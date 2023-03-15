@@ -23,6 +23,8 @@
                     </center>
                 </div>
                 <div class="col-md-6 rightbox">
+                    <input type="hidden" value="@ViewBag.Mode" name="Mode" />
+                    <input type="hidden" asp-for="Id" />
                     <div class="mb-3">
                         <label for="name" class="form-label">Name</label>
                         <input type="text" class="form-control" id="name" placeholder="" asp-for="Name">
@@ -66,7 +68,7 @@
                         <input type="text" class="form-control" id="docno" placeholder="" asp-for="DocumentNo">
                     </div>
                     <center>
-                        <button type="submit">Save</button>
+                        <button type="button" onclick="SaveAndSuccess()">Save</button>
                         <button type="button">Clear</button>
                     </center>
                 </div>
@@ -76,3 +78,26 @@
 
 </body>
 </html>
+
+<script>
+    function SaveAndSuccess(){
+        $.ajax({
+            cache: true,
+            type: "POST",
+            url: "/Passport/PassportRegister",
+            data: $('#Passportform').serialize(),
+            success: function (json) {
+                if (json.message === 'Success') {
+                    $('#SAVEDATASUCCESS').modal('show');
+                } else if (json.message === 'ERROR') {
+                    alert
+                }
+                else{
+
+                }
+            },
+
+            complete: function () { }
+        });
+    }
+</script>

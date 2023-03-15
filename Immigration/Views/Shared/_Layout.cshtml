@@ -41,7 +41,6 @@
                         <a href="#">ລາຍງານ <i class="fas fa-caret-down"></i></a>
                         <div class="dropdown-menu">
                             <ul>
-                                <li><a asp-area="" asp-controller="Report" asp-action="Mdata">Master Data</a></li>
                                 <li><a asp-area="" asp-controller="Report" asp-action="Personinout">ຂໍ້ມູນເຂົ້າ-ອອກ ສປປ ລາວ</a></li>
                                 <li><a asp-area="" asp-controller="Report" asp-action="Psgborderpassbook">ສະຖິຕິຜູ້ໂດຍສານນຳໃຊ້ ປື້ມຜ່ານແດນ ເຂົ້າ-ອອກ</a></li>
                                 <li><a asp-area="" asp-controller="Report" asp-action="Psgborderpasspaper">ສະຖິຕິຜູ້ໂດຍສານນຳໃຊ້ ໃບຜ່ານແດນ ເຂົ້າ-ອອກ</a></li>
@@ -53,6 +52,20 @@
                             </ul>
                         </div>
                     </li>
+                    <li>
+                        <a href="#">Master Data <i class="fas fa-caret-down"></i></a>
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li><a asp-area="" asp-controller="Data" asp-action="PassportData">PassportData</a></li>
+                                <li><a asp-area="" asp-controller="Data" asp-action="Mdata">BORDER Data</a></li>
+                                <li><a asp-area="" asp-controller="Data" asp-action="Mdata">TEMPORARY Data</a></li>
+                                <li><a asp-area="" asp-controller="Data" asp-action="Mdata">TRUCK Data</a></li>
+                                <li><a asp-area="" asp-controller="Data" asp-action="Mdata">BLACKLIST Data</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a asp-area="" asp-controller="Account" asp-action="Login">Login</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Data">Checking Infomation</a></li>
                     <li><a asp-area="" asp-controller="Account" asp-action="Login">ເຂົ້າສູ່ລະບົບ</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Data">ກວດຂໍ້ມູນສ່ວນບຸກຄົນ</a></li>
                 </ul>
@@ -70,6 +83,57 @@
                 </ul>
             </div>
         </div>
+
+        <div id="SAVEDATASUCCESS" class="modal fade modal-setting" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header pb-0" style="border-bottom: none;">
+                        <div class="card-title">บันทึกข้อมูล</div>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body pt-3" style="padding: 2em;">
+                        <div class="f-popup">
+                            คุณได้ทำการ <span class="fw-bold"> 'บันทึกข้อมูล' </span> เรียบร้อยแล้ว
+                        </div>
+
+                        <div class="row mt-4">
+                            <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                                <div class="form-group btn-create-group">
+                                    <button class="btn btn-save" id="ButtonSAVEDATA" onclick="" type="button"> ตกลง </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="SAVEDATAERROR" class="modal fade modal-setting" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header pb-0" style="border-bottom: none;">
+                        <div class="card-title">บันทึกข้อมูล</div>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body pt-3" style="padding: 2em;">
+                        <div class="f-popup">
+                            บันทึกข้อมูล <span class="fw-bold"> 'ไม่สำเร็จ' </span> กรุณาลองอีกครั้ง
+                        </div>
+
+                        <div class="row mt-4">
+                            <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                                <div class="form-group btn-create-group">
+                                    <button class="btn btn-save" id="ButtonSAVEDATA" onclick="" type="button"> ตกลง </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>   </div>
        
         <!-- 
             <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
