@@ -1,4 +1,7 @@
-﻿namespace Immigration.Models
+﻿using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+
+namespace Immigration.Models
 {
     public class TruckMasterModel
     {
@@ -7,5 +10,6 @@
         public string? Truck_Type { get; set; }
         public string? Truck_Name { get; set; }
         public string? Mode { get; set; }
+       
     }
 }

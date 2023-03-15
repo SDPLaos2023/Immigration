@@ -3,6 +3,7 @@ using Immigration.Models;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using System.Data;
+using System.Security.Cryptography;
 
 namespace Immigration.Services
 {
@@ -81,5 +82,6 @@ namespace Immigration.Services
                 return dt;
             }
         }
+        
     }
 }

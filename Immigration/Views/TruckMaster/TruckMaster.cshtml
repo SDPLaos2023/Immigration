@@ -1,8 +1,12 @@
 ﻿@using System.Data;
+
 @model TruckMasterModel;
+@*@model List<TruckMasterListModel>;*@
+
 @{
     ViewData["Title"] = "Passport";
     var Mode = ViewBag.Mode;
+    
 }
 
 <!DOCTYPE html>
@@ -53,7 +57,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @*@foreach (var item in ViewBag.dateTruck)
+                    @foreach (var item in ViewBag.dateTruck)
                     {
                         <tr>
                         <th scope="row">1</th>
@@ -64,9 +68,9 @@
                         <td><button type="button">Update</button><button>Delete</button></td>
                         </tr>
                     }  
-                    *@
+                    
                    
-                    </tbody>
+                 </tbody>
             </table>
         </div>
         </form>

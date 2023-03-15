@@ -1,6 +1,7 @@
 ﻿using Immigration.Models;
 using Immigration.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Security.Cryptography;
 
 namespace Immigration.Controllers
@@ -18,7 +19,7 @@ namespace Immigration.Controllers
             if (_ID == null)
             {
                 ViewBag.Mode = "INSERT";
-            }
+            }          
             var _BkackList = new BlackListModels();          
             var _dataTable = oTruckMasterService.BlackListSelect(_ID);
             return View(_BkackList);

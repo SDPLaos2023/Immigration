@@ -20,12 +20,14 @@ namespace Immigration.Controllers
             {
                 ViewBag.Mode = "INSERT";
             }
+
             var _TruckMaster = new TruckMasterModel();
             var _dataTable = oTruckMasterService.TruckMasterSelect(ID);
             ViewBag.dateTruck = _dataTable;
-            return View(_TruckMaster);
-
+            return View();
+          
         }
+
         [HttpPost]
         public IActionResult TruckMaster(TruckMasterModel truckMasterModel)
         {
